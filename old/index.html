@@ -1,0 +1,93 @@
+<!doctype HTML>
+<html>
+	<head>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<!-- Display the countdown timer in an element -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div id="banner">
+						<img src="img/landscape.png" class="img-fluid" alt="Responsive image" style="margin-top: 200px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<form id="settings">
+						<div class="form-row">
+							<div class="form-group col">
+								<fieldset>
+									<h3>Theme:</h3>
+									<input type="radio" name="theme" value="default" class="form-control" checked> Default Mode<br>
+									<input type="radio" name="theme" value="one" class="form-control"> Mode One<br>
+									<input type="radio" name="theme" value="two" class="form-control"> Mode Two<br>
+									<input type="radio" name="theme" value="three" class="form-control"> Mode Three<br>
+								</fieldset>
+							</div>	
+							<div class="form-group col">
+								<fieldset>
+									<h3>Round duration:</h3>
+									<label for="timerhours">Hours</label>
+									<input type="number" name="timerhours" id="timerhours" min="0" value="0" class="form-control">
+									<label for="timerminutes">Minutes</label>
+									<input type="number" name="timerminutes" id="timerminutes" min="0" max="59" value="50" class="form-control">
+									<label for="timerseconds">Seconds</label>
+									<input type="number" name="timerseconds" id="timerseconds" min="0" max="59" value="0" class="form-control">
+								</fieldset>
+							</div>
+							<div class="form-group col">
+								<fieldset>
+									<h3>Intervals:</h3>
+									<input type="radio" name="mode" value="auto" id="auto" checked> Automatic<br>
+									<input type="radio" name="mode" value="manual" id="manual"> Manual<br>
+									<fieldset id="interval" style="display: block;">
+										<label for="intervalhours">Hours</label>
+										<input type="number" name="intervalhours" id="intervalhours" min="0" value="0" class="form-control">
+										<label for="intervalminutes">Minutes</label>
+										<input type="number" name="intervalminutes" id="intervalminutes" min="0" max="59" value="10" class="form-control">
+										<label for="intervalseconds">Seconds</label>
+										<input type="number" name="intervalseconds" id="intervalseconds" min="0" max="59" value="0" class="form-control"><br>
+									</fieldset>
+								</fieldset>
+								<div class="btn btn-primary" id="start">Start</div>
+								<div class="btn btn-primary" id="vid">Video</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Display the countdown timer in an element -->
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<p id="timer"></p>
+				</div>
+				<div class="progress">
+				  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12" id="screen">
+					<video height="100%" id="glhf">
+						<source src="mov/glhf.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+		<script src="js/app.js"></script>
+	</body>
+</html>
