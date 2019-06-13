@@ -5,72 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <title>CounterDown</title>
     <!-- Bootstrap CSS  -->
-    <link rel="stylesheet" href="/counterDown/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Bootstrap CSS  -->
     <!-- Counter Down CSS  -->
-    <link rel="stylesheet" href="/counterDown/css/counterDown.css">
-    <!-- Counter Down CSS  -->
+    <link rel="stylesheet" href="css/counterDown.css">
+    <!-- My style CSS  -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
 
 </header>
-<main>
-    <section id="counterDown" class="counterDown">
-        <form id="form" class="counterDown__form">
-            <div class="form-group">
-                <label for="roundsVal">Rounds</label>
-                <input type="text" class="form-control" id="roundsVal" required aria-describedby="roundsHelp"
-                       placeholder="Enter the number of rounds">
-                <small id="emailHelp" class="form-text text-muted">How many rounds do you want to have?</small>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div id="banner">
+                <img src="img/landscape.png" class="img-fluid" alt="Responsive image" style="margin-top: -200px;">
             </div>
-            <div class="form-group">
-                <label for="timeVal">Time (mins)</label>
-                <input type="text" class="form-control" id="timeVal" required placeholder="Time">
-            </div>
-            <div class="form-group">
-                <label for="intervalVal">Interval (mins)</label>
-                <input type="text" class="form-control" id="intervalVal" required placeholder="Interval">
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="videoRadio" id="radio1" value="option1" checked>
-                <label class="form-check-label" for="radio1">
-                    Start the video for the each round
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="videoRadio" id="radio2" value="option2">
-                <label class="form-check-label" for="radio2">
-                    Start the video only once
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="videoRadio" id="radio3" value="option3">
-                <label class="form-check-label" for="radio3">
-                    Not to start the video
-                </label>
-            </div>
-            <button id="playBtn" type="button" class="btn">Submit</button>
-        </form>
-        <div id="counterDownBlock" class="counterDownBlock">
-            <div id="counterDownLabel" class="counterDownLabel"></div>
-            <div id="counterDownTimer" class="counterDownTimer"></div>
         </div>
-        <div id="overlay" class="overlay"></div>
-        <video id="video">
-            <source src="/counterDown/media/counterDown.mp4" type="video/mp4">
-            <source src="/counterDown/media/counterDown.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-        <!--<video id="video" src="/counterDown/media/counterDown.mp4">-->
+    </div>
+</div>
 
-            <!--</video>-->
-    </section>
+<div class="container-fluid">
+    <div class="row">
+        <main>
+            <section id="counterDown" class="counterDown">
+                <form id="form" class="counterDown__form">
+                    <div class="form-group">
+                        <label for="roundsVal">Rounds</label>
+                        <input type="text" class="form-control" id="roundsVal" required aria-describedby="roundsHelp"
+                            placeholder="Enter the number of rounds">
+                        <small id="emailHelp" class="form-text text-muted">How many rounds do you want to have?</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeVal">Time (mins)</label>
+                        <input type="text" class="form-control" id="timeVal" required placeholder="Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="intervalVal">Interval (mins)</label>
+                        <input type="text" class="form-control" id="intervalVal" required placeholder="Interval">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="videoRadio" id="radio1" value="option1" checked>
+                        <label class="form-check-label" for="radio1">
+                            Start the video for the each round
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="videoRadio" id="radio2" value="option2">
+                        <label class="form-check-label" for="radio2">
+                            Start the video only once
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="videoRadio" id="radio3" value="option3">
+                        <label class="form-check-label" for="radio3">
+                            No video
+                        </label>
+                    </div>
+                    <button id="playBtn" type="button" class="btn">Submit</button>
+                </form>
+                <div id="counterDownBlock" class="counterDownBlock">
+                    <div id="counterDownLabel" class="counterDownLabel"></div>
+                    <div id="counterDownTimer" class="counterDownTimer"></div>
+                </div>
+                <div id="overlay" class="overlay"></div>
+                <video id="video">
+                    <source src="mov/glhf.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!--<video id="video" src="mov/glhf.mp4">-->
 
-</main>
+                    <!--</video>-->
+            </section>
+
+        </main>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="/counterDown/js/counterDown.js"></script>
+<script src="js/counterDown.js"></script>
 </body>
 </html>

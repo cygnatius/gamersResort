@@ -5,6 +5,7 @@
     var video = document.getElementById("video"),
         playBtn = document.getElementById('playBtn'),
         myForm = document.getElementById('form'),
+        myBanner = document.getElementById('banner'),
         countDownTimer = document.getElementById('counterDownTimer'),
         counterDownBlock = document.getElementById('counterDownBlock'),
         overlay = document.getElementById('overlay'),
@@ -21,7 +22,7 @@
             startRounds();
         }
         else {
-            alert("Please fill in all fields.");
+            alert("Please fill in all fields!");
         }
     }
 
