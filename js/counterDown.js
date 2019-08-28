@@ -3,6 +3,7 @@
  */
 (function () {
     var video = document.getElementById("video"),
+        video2 = document.getElementById("video2"),
         playBtn = document.getElementById('playBtn'),
         myForm = document.getElementById('form'),
         myBanner = document.getElementById('banner'),
@@ -124,7 +125,8 @@
     }
 
     function showOverlay() {
-        overlay.style.display = "flex";
+        // overlay.style.display = "flex";
+        overlay.style.display = "none";
         setTimeout(function () {
             overlay.style.opacity = "1";
         }, 300);
@@ -147,6 +149,13 @@
         }, 300);
     }
 
+    function hideVideo2() {
+        video2.style.opacity = "0";
+        setTimeout(function () {
+            video2.style.display = "none";
+        }, 300);
+    }
+
     function showVideo() {
         video.style.display = "block";
         setTimeout(function () {
@@ -155,8 +164,20 @@
         }, 300);
     }
 
+    function showVideo2() {
+        video2.style.display = "block";
+        setTimeout(function () {
+            video2.style.opacity = "1";
+            play2();
+        }, 300);
+    }
+
     function play() {
         video.play();
+    }
+
+    function play2() {
+        video2.play();
     }
 
     function showCounter(e) {
@@ -197,6 +218,7 @@
                     display.hide();
                     counterDownLabel.hide();
                     displayBlock.hide();
+                    showVideo2();
                 }, 1000);
 
                 //timer = duration;

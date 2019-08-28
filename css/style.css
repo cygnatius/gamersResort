@@ -1,4 +1,4 @@
-/* 
+/*
 
 Colors -
 
@@ -27,7 +27,7 @@ body {
 }
 
 #banner {
-	height:300px;
+	height: 300px;
 }
 
 #glhf {
@@ -47,3 +47,90 @@ body {
 #video {
     margin-top: -100px;
 }
+
+.quickstart {
+    color: #fc7e2f;
+    background-color: #134070;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 80px;
+    margin: 20px;
+    border-radius: 25px;
+    vertical-align: middle;
+}
+
+.hidden {
+    display: none;
+}
+
+.inputTimer th {
+    text-align: center;
+}
+
+.inputDigit {
+    font-size: 4em;
+    width: 120px;
+    text-align: center;
+}
+
+@keyframes changeKey {
+  from {
+    color: #fc7e2f;
+    background-color: #134070;
+  }
+
+  to {
+    color: white;
+    background-color: #333;
+  }
+}
+
+@keyframes changeDigit {
+  from {
+    color: #fc7e2f;
+    background-color: #134070;
+  }
+
+  to {
+    color: white;
+    background-color: #333;
+  }
+}
+
+.activeDigit {
+    font-size: 4em;
+    width: 120px;
+    text-align: center;
+    animation-duration: 0.1s;
+    animation-name: changeKey;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.keypad tbody tr td {
+    color: #fc7e2f;
+    background-color: #134070;
+    font-size: 2em;
+    font-weight: bold;
+    min-width: 120px;
+    max-width: 120px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.keypad tbody tr td:hover {
+    animation-duration: 0.4s;
+    animation-name: changeKey;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} 
+
+.keypad tbody tr {
+    height: 120px;
+}
+
+#keyBack, #keyForward {
+    font-size: 1em;
+}
+

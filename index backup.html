@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-    <title>Gamer's Resort Timer</title>
+    <title>CounterDown</title>
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Bootstrap CSS  -->
@@ -18,14 +18,13 @@
 </header>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
             <div id="banner">
-                <img src="img/landscape.png" class="img-fluid" alt="Responsive image" style="margin-top: -200px; height: 625px;">
+                <img src="img/landscape.png" class="img-fluid" alt="Responsive image" style="margin-top: -200px;">
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="container-fluid">
     <div class="row">
@@ -33,66 +32,51 @@
             <section id="counterDown" class="counterDown">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-2 interface">
+                        <div class="col-2">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-12"><h2 style="text-align: center;">Quickstart</h2></div>
-                                    <div class="col-md-12">
-                                        <div class="quickstart"><h2 class="rounded" id="Q50">50 mins</h2></div>
+                                    <div class="col-6">
+                                        <div class="quickstart"><h2 class="rounded">50 mins</h2></div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="quickstart"><h2 class="rounded" id="Q40">40 mins</h2></div>
+                                    <div class="col-6">
+                                        <div class="quickstart"><h2 class="rounded">40 mins</h2></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 inputTimer interface">
+                        <div class="col-8 inputTimer">
                             <table class="table">
                                 <tbody>
                                     <tr>
                                         <td>
                                             <div class="form-group">
                                                 <label for="tenhrVal">Hours</label>
-                                                <input type="text" class="form-control activeDigit" id="tenhrVal" required placeholder="Time" value=0 disabled>
+                                                <input type="text" class="form-control inputDigit" id="tenhrVal" required placeholder="Time" value=0>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-group">
                                                 <label for="hrVal">_</label>
-                                                <input type="text" class="form-control inputDigit" id="hrVal" required placeholder="Time" value=0 disabled>
+                                                <input type="text" class="form-control inputDigit" id="hrVal" required placeholder="Time" value=0>
                                             </div>
                                         </td>
-                                        <td><p style="font-size: 6em; text-align: center;">:</p></td>
+                                        <td><p style="font-size: 6em;">:</p></td>
                                         <td>
                                             <div class="form-group">
                                                 <label for="tenmVal">Minutes</label>
-                                                <input type="text" class="form-control inputDigit" id="tenmVal" required placeholder="Time" value=0 disabled>
+                                                <input type="text" class="form-control inputDigit" id="tenmVal" required placeholder="Time" value=0>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-group">
                                                 <label for="mVal">_</label>
-                                                <input type="text" class="form-control inputDigit" id="mVal" required placeholder="Time" value=0 disabled>
+                                                <input type="text" class="form-control inputDigit" id="mVal" required placeholder="Time" value=0>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <button class="btn" id="manualTimer">Submit</button>
-                        </div>
-                        <div class="col-md-4 interface">
-                            <h1>Keypad</h1>
-                            <table class="table table-bordered keypad">
-                                <tbody>
-                                    <tr><td id="key1">1</td><td id="key2">2</td><td id="key3">3</td></tr>
-                                    <tr><td id="key4">4</td><td id="key5">5</td><td id="key6">6</td></tr>
-                                    <tr><td id="key7">7</td><td id="key8">8</td><td id="key9">9</td></tr>
-                                    <tr><td id="keyBack">back</td><td id="key0">0</td><td id="keyForward">forward</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <form id="form" class="counterDown__form">
+                            <form id="form-inline" class="counterDown__form">
                                 <div class="form-group hidden" id="rounds">
                                     <label for="roundsVal">Rounds</label>
                                     <input type="text" class="form-control" id="roundsVal" required aria-describedby="roundsHelp"
@@ -125,7 +109,7 @@
                                         No video
                                     </label>
                                 </div>
-                                <button id="playBtn" type="button" class="btn hidden">Submit</button>
+                                <button id="playBtn" type="button" class="btn">Submit</button>
                             </form>
                             <div id="counterDownBlock" class="counterDownBlock">
                                 <div id="counterDownLabel" class="counterDownLabel"></div>
@@ -136,13 +120,21 @@
                                 <source src="mov/glhf.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <video id="video2">
-                                <source src="mov/alarm.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
                             <!--<video id="video" src="mov/glhf.mp4">-->
-    
+
                                 <!--</video>-->
+                        </div>
+                        <div class="col-4">
+                            <h1>Keypad</h1>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr><td>1</td><td>2</td><td>3</td></tr>
+                                    <tr><td>4</td><td>5</td><td>6</td></tr>
+                                    <tr><td>7</td><td>8</td><td>9</td></tr>
+                                    <tr><td>back</td><td>0</td><td>forward</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -150,11 +142,9 @@
         </main>
     </div>
 </div>
-    
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-        <script src="js/counterDown.js"></script>
-        <script src="js/buttons.js"></script>
+<script src="js/counterDown.js"></script>
 </body>
 </html>
