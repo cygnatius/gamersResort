@@ -103,9 +103,10 @@ $(document).ready(function(){
     }
 
     function manualTimer() {
-      var minutes = (($("#tenhrVal").val() * 10 * 60 ) + ($("#hrVal").val() * 60 ) + ($("#tenmVal").val() * 10 ) + $("#mVal").val());
+      var minutes = parseInt(($("#tenhrVal").val() * 10 * 60 ) + parseInt($("#hrVal").val() * 60 ) + parseInt($("#tenmVal").val() * 10 ) + parseInt($("#mVal").val()));
       if ( minutes > 0) {
         $( ".interface" ).css( "display", "none" );
+        //alert(minutes);
         submitTimer(minutes);
       } else {
         alert("Please enter at least 1 minute...");

@@ -196,13 +196,14 @@
     }
 
     function startTimer(duration, display, name) {
-        var timer = duration, minutes, seconds;
+        var timer = duration, hours, minutes, seconds;
         var delay = setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
+            hours = parseInt(timer / 60 / 60, 10);
+            minutes = parseInt(timer / 60 % 60, 10);
             seconds = parseInt(timer % 60, 10);
 
             minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+            seconds = seconds < 10 && (minutes+hours) > 0 ? "0" + seconds : seconds;
 
             var displayBlock = $('#counterDownBlock');
             var counterDownLabel = $('#counterDownLabel');
@@ -210,7 +211,13 @@
             counterDownLabel.text(name);
             counterDownLabel.show();
             display.show();
-            display.text(minutes + ":" + seconds);
+            if (hours > 0) {
+                display.text(hours + ":" + minutes + ":" + seconds);
+            } else if (minutes > 0) {
+                display.text(minutes + ":" + seconds);
+            } else {
+                display.text(seconds);
+            }
             if (--timer < 0) {
                 // start next raund(delay) or end
                 clearInterval(delay); // stop the interval
